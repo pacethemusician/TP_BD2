@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,20 +21,25 @@ namespace ConsoleApplication1
         }
 
         // NUMERO 1 !!!!!!!!!!!!!!!!!!!
+        // sp.StateProvinceID as id, sp.Name, count(p.BusinessEntityID)
         static void no1(Model1 context) {
             Console.WriteLine("// NUMERO 1 //////////////////////////////////////////////");
-            Console.WriteLine("ID          Name                                               Personnes");
-            Console.WriteLine("----------- -------------------------------------------------- -----------");
+            Console.WriteLine("ID          Name                           Personnes");
+            Console.WriteLine("----------- ------------------------------ -----------");
 
-            var query = context.AddressType.Where(a => a.Name == "Home")
-
-            foreach (var province in query)
+            var query = context.Person
+                        .GroupBy(a => a.BusinessEntity.BusinessEntityAddress.FirstOrDefault(prout => prout.AddressType.Name == "Home").Address.StateProvince).Where(p => p.Key != null)
+                        .Select(ad => new {
+                                            count = ad.Count(),
+                                            nomProvince = ad.Key.Name,
+                                            provinceId = ad.Key.StateProvinceID
+                                          });
+            foreach (var item in query)
             {
-                string str_prov = province.StateProvinceID.ToString();
-                string str_name = province.Name.ToString();
-                Console.Write("{0}{1}", str_prov, writeSpace(12 - str_prov.Length));
-                Console.Write("{0}{1}", str_name, writeSpace(50 - str_name.Length));
-                Console.WriteLine("{0}", (context.Person).Count());
+                Console.WriteLine("{0}{1}{2}",
+                                        item.provinceId.ToString() + writeSpace(12 - item.provinceId.ToString().Length),
+                                        item.nomProvince + writeSpace(31 - item.nomProvince.Length),
+                                        item.count);
             }
             Console.ReadKey();
         }
@@ -47,21 +53,6 @@ namespace ConsoleApplication1
 			}
             return s;
         }
-
-//SELECT sp.StateProvinceID as id, sp.Name, count(p.BusinessEntityID) as personnes
-//FROM  Person.Person p
-//JOIN Person.BusinessEntity as be
-//ON p.BusinessEntityID = be.BusinessEntityID
-//JOIN Person.BusinessEntityAddress bea
-//ON be.BusinessEntityID = bea.BusinessEntityID
-//JOIN Person.AddressType at
-//ON bea.AddressTypeId = at.AddressTypeId
-//JOIN Person.Address ad
-//ON bea.AddressID = ad.AddressID
-//JOIN Person.StateProvince sp
-//ON ad.StateProvinceID = sp.StateProvinceID
-//WHERE at.Name = 'Home'
-//GROUP BY sp.StateProvinceID, sp.Name
 
 
             
