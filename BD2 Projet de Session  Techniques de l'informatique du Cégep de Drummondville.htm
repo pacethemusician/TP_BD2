@@ -1,0 +1,921 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0163)https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/ -->
+<!DOCTYPE html PUBLIC "" ""><HTML class="no-js" lang="fr-FR"><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+	 
+<META charset="UTF-8">	 
+<META name="viewport" content="width=device-width">	 <LINK href="http://gmpg.org/xfn/11" 
+rel="profile">	 <LINK href="https://informatique420.cegepdrummond.ca/wordpress/xmlrpc.php" 
+rel="pingback">	 <!--[if lt IE 9]>
+	<script src="https://informatique420.cegepdrummond.ca/wordpress/wp-content/themes/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	 
+<SCRIPT>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</SCRIPT>
+ <TITLE>BD2: Projet de Session | Techniques de l'informatique du Cégep de 
+Drummondville</TITLE> 
+<META name="robots" content="noindex,follow"> <LINK title="Techniques de l'informatique du Cégep de Drummondville » Flux" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/feed/" rel="alternate" 
+type="application/rss+xml"> <LINK title="Techniques de l'informatique du Cégep de Drummondville » Flux des commentaires" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/comments/feed/" 
+rel="alternate" type="application/rss+xml"> <LINK title="Techniques de l'informatique du Cégep de Drummondville » Protégé&nbsp;: BD2: Projet de Session Flux des commentaires" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/feed/" 
+rel="alternate" type="application/rss+xml">		 
+<SCRIPT type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/informatique420.cegepdrummond.ca\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</SCRIPT>
+		 
+<STYLE type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</STYLE>
+ <LINK id="crayon-css" href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/crayon.min.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="crayon-theme-classic-css" 
+href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/classic.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="crayon-font-monaco-css" 
+href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/monaco.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="drawit-css-css" href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/drawit.min.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="twentyfifteen-fonts-css" 
+href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/css.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="genericons-css" href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/genericons.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="twentyfifteen-style-css" 
+href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/style.css" 
+rel="stylesheet" type="text/css" media="all"> <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='https://informatique420.cegepdrummond.ca/wordpress/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]--> <!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='https://informatique420.cegepdrummond.ca/wordpress/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]--> 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/jquery.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/jquery-migrate.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"https:\/\/informatique420.cegepdrummond.ca\/wordpress\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Faites %s pour copier, %s pour coller","minimize":"Click To Expand Code"};
+/* ]]> */
+</SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/crayon.min.js" type="text/javascript"></SCRIPT>
+ <LINK title="RSD" href="https://informatique420.cegepdrummond.ca/wordpress/xmlrpc.php?rsd" 
+rel="EditURI" type="application/rsd+xml"> <LINK href="https://informatique420.cegepdrummond.ca/wordpress/wp-includes/wlwmanifest.xml" 
+rel="wlwmanifest" type="application/wlwmanifest+xml"> 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18015"> <LINK href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/" 
+rel="canonical"> <LINK href="https://informatique420.cegepdrummond.ca/wordpress/?p=3120" 
+rel="shortlink">	 
+<STYLE type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</STYLE>
+ </HEAD> 
+<BODY class="page page-id-3120 page-child parent-pageid-2870 page-template-default">
+<DIV class="hfeed site" id="page"><A class="skip-link screen-reader-text" href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/#content">Aller 
+au contenu principal</A>
+<DIV class="sidebar" id="sidebar"><HEADER class="site-header" id="masthead" 
+role="banner">
+<DIV class="site-branding">
+<P class="site-title"><A href="https://informatique420.cegepdrummond.ca/wordpress/" 
+rel="home">Techniques de l'informatique du Cégep de Drummondville</A></P>
+<P class="site-description">Un site pour apprendre l'informatique</P><BUTTON 
+class="secondary-toggle">Menu et widgets</BUTTON>			 </DIV><!-- .site-branding -->
+		 </HEADER><!-- .site-header -->			 
+<DIV class="secondary" id="secondary"><NAV class="main-navigation" id="site-navigation" 
+role="navigation">
+<DIV class="menu-pages-importantes-container">
+<UL class="nav-menu" id="menu-pages-importantes">
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947" 
+  id="menu-item-947"><A href="https://informatique420.cegepdrummond.ca/wordpress/">Information 
+  sur ce site</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1046" 
+  id="menu-item-1046"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/">Cours 
+  offerts 2015-16</A></LI></UL></DIV></NAV><!-- .main-navigation -->									 
+<DIV class="widget-area" id="widget-area" role="complementary"><ASIDE class="widget widget_nav_menu" 
+id="nav_menu-7">
+<H2 class="widget-title">Commandes</H2>
+<DIV class="menu-menu-bd-commandes-container">
+<UL class="menu" id="menu-menu-bd-commandes">
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-2863" 
+  id="menu-item-2863"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/">420-BD2-DM 
+  Base de donnée 2 H2016</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2411" 
+  id="menu-item-2411"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-alter-table/">T-SQL: 
+  ALTER TABLE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2445" 
+  id="menu-item-2445"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-case/">T-SQL: 
+  CASE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2414" 
+  id="menu-item-2414"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-contraintes/">T-SQL: 
+  Contraintes</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2769" 
+  id="menu-item-2769"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-create-cursor/">T-SQL: 
+  CURSOR</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2555" 
+  id="menu-item-2555"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-create-login-et-create-user/">T-SQL: 
+  CREATE LOGIN et CREATE USER</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2416" 
+  id="menu-item-2416"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-create-table/">T-SQL: 
+  CREATE TABLE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2660" 
+  id="menu-item-2660"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-create-type/">T-SQL: 
+  CREATE TYPE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2734" 
+  id="menu-item-2734"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-declare-table/">T-SQL: 
+  DECLARE @var  |  TABLE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2412" 
+  id="menu-item-2412"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-delete/">T-SQL: 
+  DELETE</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2410" 
+  id="menu-item-2410"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-identity-autoincrement/">T-SQL: 
+  IDENTITY (autoincrément)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415" 
+  id="menu-item-2415"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-insert/">T-SQL: 
+  INSERT</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2590" 
+  id="menu-item-2590"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-output/">T-SQL: 
+  OUTPUT</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2417" 
+  id="menu-item-2417"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/db2-select/">T-SQL: 
+  SELECT</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2413" 
+  id="menu-item-2413"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/bd2-sp_help/">T-SQL: 
+  sp_help</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2454" 
+  id="menu-item-2454"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-chaines-de-caracteres/">BD2: 
+  Les chaines de caractères</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2463" 
+  id="menu-item-2463"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-date-et-time-2/">BD2: 
+  DATE et TIME</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3034" 
+  id="menu-item-3034"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/t-sql-autres-commandes/">T-SQL: 
+  autres commandes</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3160" 
+  id="menu-item-3160"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/ef-select/">EF: 
+  SELECT</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3168" 
+  id="menu-item-3168"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-commandes/ef-requete-linq/">EF: 
+  requête LINQ</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3187" 
+  id="menu-item-3187"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/c-commandes/">C# 
+  commandes</A></LI></UL></DIV></ASIDE><ASIDE class="widget widget_nav_menu" id="nav_menu-5">
+<H2 class="widget-title">Notes de cours</H2>
+<DIV class="menu-menu-bd2-container">
+<UL class="menu" id="menu-menu-bd2">
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1676" 
+  id="menu-item-1676"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/">420-BD2-DM 
+  Base de donnée 2 H2016</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2381" 
+  id="menu-item-2381"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-references/">BD2: 
+  Références</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2706" 
+  id="menu-item-2706"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-lectures-interessantes/">BD2: 
+  Lectures intéressantes</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2182" 
+  id="menu-item-2182"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/db2-schema-dadventureworks/">DB2: 
+  Schéma d’AdventureWorks</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1675" 
+  id="menu-item-1675"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/">BD2: 
+  Introduction</A> 
+  <UL class="sub-menu">
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2145" 
+    id="menu-item-2145"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-installation-visual-studio/">BD2: 
+    Installation Visual-studio et Management Studio</A>	 
+    <UL class="sub-menu">
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2228" 
+      id="menu-item-2228"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-installation-sql-server/">BD2: 
+      Installation SQL-Server</A></LI></UL></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2144" 
+    id="menu-item-2144"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-installation-squirrel/">BD2: 
+    Installation Squirrel</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2147" 
+    id="menu-item-2147"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-introduction/bd2-connection-a-distance/">BD2: 
+    Connexion à distance à partir de Visual Studio</A></LI></UL></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2207" 
+  id="menu-item-2207"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-exercice-de-revision/">BD2: 
+  Retour sur les bases de SQL</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2139" 
+  id="menu-item-2139"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-la-bd-adventureworks2014/">BD2: 
+  La BD AdventureWorks2014</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2163" 
+  id="menu-item-2163"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-adventureworks2014-premieres-requetes/">BD2: 
+  Révision des commandes (SELECT)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2309" 
+  id="menu-item-2309"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-tables-temporaires/">BD2: 
+  Les tables temporaires</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2331" 
+  id="menu-item-2331"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-revision-des-commandes-create-table/">BD2: 
+  Révision des commandes (CREATE TABLE)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2298" 
+  id="menu-item-2298"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-revision-des-commandes-insert/">BD2: 
+  Révision des commandes (INSERT)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2595" 
+  id="menu-item-2595"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-insert-a-partir-de-donnees-existantes/">BD2: 
+  INSERT à partir de données existantes</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2382" 
+  id="menu-item-2382"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-transactions/">BD2: 
+  Les transactions: premier contact</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2409" 
+  id="menu-item-2409"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-techniques-de-verification-des-requetes/">BD2: 
+  Techniques de vérification des requêtes</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2453" 
+  id="menu-item-2453"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-chaines-de-caracteres/">BD2: 
+  Les chaines de caractères</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2464" 
+  id="menu-item-2464"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-date-et-time-2/">BD2: 
+  DATE et TIME</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2551" 
+  id="menu-item-2551"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-creation-dune-bd/">BD2: 
+  Les rôles</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2548" 
+  id="menu-item-2548"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-creation-dusagers/">BD2: 
+  Création d’usagers</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2550" 
+  id="menu-item-2550"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/creation-dune-bd-complete/">BD2: 
+  Création d’une BD complète</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2481" 
+  id="menu-item-2481"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-exercices-sur-le-select/">BD2: 
+  Exercices sur le SELECT avec une table</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2553" 
+  id="menu-item-2553"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-exercices-sur-select-multi-tables/">BD2: 
+  Exercices sur SELECT multi-tables</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2552" 
+  id="menu-item-2552"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/exercices-sur-insert/">BD2: 
+  Exercices sur INSERT (et un peu de DELETE)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655" 
+  id="menu-item-2655"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-exercice-creation-de-la-bd-ges/">BD2: 
+  Exercice Création de la BD GES</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2746" 
+  id="menu-item-2746"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-select-description-de-son-evaluation/">BD2: 
+  SELECT Phases logiques du processus de la requête</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2793" 
+  id="menu-item-2793"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-index-clustered-vs-non-clustered/">BD2: 
+  INDEX Clustered vs Non-Clustered</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2862" 
+  id="menu-item-2862"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-creation-de-type/">BD2: 
+  Création de type</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2745" 
+  id="menu-item-2745"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-scripts-en-t-sql/">BD2: 
+  Scripts (partie 1: var et controle)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2753" 
+  id="menu-item-2753"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-script-partie-2-les-variables-tableaux/">BD2: 
+  Scripts (partie 2: les variables tableaux)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2744" 
+  id="menu-item-2744"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-script-partie-2-cursor/">BD2: 
+  Scripts (partie 3: Cursor)</A></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2827" 
+  id="menu-item-2827"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-exercice-de-programmation-de-script/">BD2: 
+  Exercice de programmation de script</A> 
+  <UL class="sub-menu">
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2829" 
+    id="menu-item-2829"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-exercice-de-programmation-de-script/bd2-exercices-sur-scripts/">BD2: 
+    Étape 1: l’entête client</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2828" 
+    id="menu-item-2828"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-les-scripts/bd2-exercice-de-programmation-de-script/bd2-exercices-de-scripts-etape-2/">BD2: 
+    Étape 2: les commandes</A></LI></UL></LI>
+  <LI class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3023" 
+  id="menu-item-3023"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/">BD2: 
+  Entity Framework Code-First</A> 
+  <UL class="sub-menu">
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3022" 
+    id="menu-item-3022"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-votre-premiere-projet/">BD2: 
+    EF: Votre premier projet.</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3021" 
+    id="menu-item-3021"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-manipulation-des-donnees/">BD2: 
+    EF: Manipulation des données (CRUD)</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3020" 
+    id="menu-item-3020"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-changement-au-schema/">BD2: 
+    EF: Changement au schéma (initializer et seeder)</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3017" 
+    id="menu-item-3017"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-definition-de-la-structure/">BD2: 
+    EF: Définition de la structure</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3019" 
+    id="menu-item-3019"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/new-page/">BD2: 
+    EF: Structure par Annotations</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3018" 
+    id="menu-item-3018"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-dbmodelbuilder/">BD2: 
+    EF: Fluent API et le DbModelBuilder</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3016" 
+    id="menu-item-3016"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-dbmodelbuilder-et-les-classes-de-configuration/">BD2: 
+    EF: DbModelBuilder et les classes de configuration</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3242" 
+    id="menu-item-3242"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-aggregation-exercices/">BD2: 
+    EF Exercice: création d’une BD à partir d’un modèle</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3117" 
+    id="menu-item-3117"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/">BD2: 
+    EF: Les relations</A>	 
+    <UL class="sub-menu">
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3116" 
+      id="menu-item-3116"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-les-relations/">BD2: 
+      EF: Relation Un à Plusieurs</A></LI>
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3113" 
+      id="menu-item-3113"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-relation-un-a-plusieurs-avec-lookup/">BD2: 
+      EF: Relation Un à Plusieurs avec “lookup”</A></LI>
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3115" 
+      id="menu-item-3115"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-plusieurs-a-plusieurs/">BD2: 
+      EF: Plusieurs à Plusieurs</A></LI>
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3286" 
+      id="menu-item-3286"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-exercice-ajout-des-relations/">BD2: 
+      EF Exercice: ajout des relations</A></LI>
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3285" 
+      id="menu-item-3285"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-exercice-ajout-des-relations-partie2/">BD2: 
+      EF Exercice: ajout des relations (partie2)</A></LI></UL></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3120 current_page_item menu-item-3205" 
+    id="menu-item-3205"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/">BD2: 
+    Projet de Session</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202" 
+    id="menu-item-3202"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-projections/">BD2: 
+    EF Les projections</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3224" 
+    id="menu-item-3224"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-eager-vs-lazy-loading/">BD2: 
+    EF Eager vs Lazy Loading</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3203" 
+    id="menu-item-3203"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-bd-existante/">BD2: 
+    EF Connexion à une BD existante</A></LI>
+    <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3308" 
+    id="menu-item-3308"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-aggregation/">BD2: 
+    EF Agrégation</A>	 
+    <UL class="sub-menu">
+      <LI class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204" 
+      id="menu-item-3204"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-aggregation/">BD2: 
+      EF Agrégation</A></LI></UL></LI></UL></LI></UL></DIV></ASIDE><ASIDE class="widget widget_meta" 
+id="meta-6">
+<H2 class="widget-title">Méta</H2>
+<UL>
+  <LI><A 
+  href="https://informatique420.cegepdrummond.ca/wordpress/wp-login.php">Connexion</A></LI>
+  <LI><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/feed/">Flux 
+  <ABBR title="Really Simple Syndication">RSS</ABBR> des articles</A></LI>
+  <LI><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/comments/feed/"><ABBR 
+  title="Really Simple Syndication">RSS</ABBR> des commentaires</A></LI>
+  <LI><A title="Propulsé par WordPress, plate-forme de publication personnelle sémantique de pointe." 
+  href="http://www.wordpress-fr.net/">Site de 
+WordPress-FR</A></LI></UL></ASIDE></DIV><!-- .widget-area -->			 </DIV><!-- .secondary -->
+	 </DIV><!-- .sidebar -->	 
+<DIV class="site-content" id="content">
+<DIV class="content-area" id="primary"><main class="site-main" id="main" role="main"><ARTICLE 
+class="post-3120 page type-page status-publish hentry" id="post-3120"><HEADER 
+class="entry-header">
+<H1 class="entry-title">Protégé&nbsp;: BD2: Projet de Session</H1></HEADER><!-- .entry-header -->
+	 
+<DIV class="entry-content">
+<P style="text-align: center;"><SPAN style="font-size: 8pt;"><A title="BD2: EF Exercice: ajout des relations (partie2)" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-exercice-ajout-des-relations-partie2/">BD2: 
+EF Exercice: ajout des relations (partie2)</A>&lt;&lt;&nbsp; &gt;&gt;<A title="BD2: EF Les projections" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-projections/">BD2: 
+EF Les projections</A></SPAN></P>
+<P style="text-align: left;">Ce projet consiste à afficher les commandes 
+effectuées par des clients.</P>
+<P style="text-align: left;">Il vaut 25% de la note finale. Il est à remettre au 
+début du cours de la semaine 15 (sur le plan de cours c’est indiqué 14, mais 
+toutes les semaines sont maintenant décalées de une)</P>
+<P style="text-align: left;">Les étapes représentent le fonctionnement du 
+programme. Vous n’avez pas à les coder dans cet ordre (je vous recommande 
+d’ailleurs de commencer par la dernière étape).</P>
+<H2 style="text-align: left;">Étape 1</H2>
+<P style="text-align: left;">La première étape consiste à afficher une liste des 
+provinces et du nombre, par province, des clients&nbsp; ayant une adresse de 
+type ‘Home’.</P>
+<P style="text-align: left;">c.à.d. l’équivalent de la requête suivante:</P><!-- Crayon Syntax Highlighter v2.7.1 -->
+		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab8922124199506" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick">SELECT sp.StateProvinceID as id, sp.Name, count(p.BusinessEntityID) as personnes
+FROM  Person.Person p
+JOIN Person.BusinessEntity as be
+ON p.BusinessEntityID = be.BusinessEntityID
+JOIN Person.BusinessEntityAddress bea
+ON be.BusinessEntityID = bea.BusinessEntityID
+JOIN Person.AddressType at
+ON bea.AddressTypeId = at.AddressTypeId
+JOIN Person.Address ad
+ON bea.AddressID = ad.AddressID
+JOIN Person.StateProvince sp
+ON ad.StateProvinceID = sp.StateProvinceID
+WHERE at.Name = 'Home'
+GROUP BY sp.StateProvinceID, sp.Name</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8922124199506-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8922124199506-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8922124199506-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-6">6</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8922124199506-7">7</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-8">8</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8922124199506-9">9</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-10">10</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab8922124199506-11">11</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-12">12</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab8922124199506-13">13</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8922124199506-14">14</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-1"><SPAN class="crayon-k">SELECT</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">as</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">id</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-e">count</SPAN><SPAN class="crayon-sy">(</SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-sy">)</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">as</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">personnes</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-2"><SPAN class="crayon-k">FROM</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-3"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntity</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">as</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-4"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-5"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityAddress</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-6"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-7"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressType</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-8"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeId</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeId</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-9"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Address</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-10"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-11"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvince</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-12"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8922124199506-13"><SPAN class="crayon-k">WHERE</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-s">'Home'</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8922124199506-14"><SPAN class="crayon-k">GROUP</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">BY</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0103 seconds] --> <!-- Crayon Syntax Highlighter v2.7.1 -->
+		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab8940995246992" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick show-plain-default">id          Name                                               personnes
+----------- -------------------------------------------------- -----------
+161         Seine (Paris)                                      386
+75          Virginia                                           1
+9           California                                         4446
+15          Florida                                            3
+181         Val d'Oise                                         30
+3           Alabama                                            1
+72          Tennessee                                          1
+66          South Australia                                    239</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8940995246992-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8940995246992-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8940995246992-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8940995246992-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8940995246992-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8940995246992-6">6</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8940995246992-7">7</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8940995246992-8">8</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8940995246992-9">9</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8940995246992-10">10</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab8940995246992-1"><SPAN class="crayon-e">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-e">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-v">personnes</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8940995246992-2"><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">-</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">-</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8940995246992-3"><SPAN class="crayon-cn">161</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Seine</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-sy">(</SPAN><SPAN class="crayon-v">Paris</SPAN><SPAN class="crayon-sy">)</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-cn">386</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8940995246992-4"><SPAN class="crayon-cn">75</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Virginia</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-cn">1</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8940995246992-5"><SPAN class="crayon-cn">9</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-i">California</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-cn">4446</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8940995246992-6"><SPAN class="crayon-cn">15</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Florida</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-cn">3</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8940995246992-7"><SPAN class="crayon-cn">181</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-i">Val</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">d</SPAN>'<SPAN class="crayon-i">Oise</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-cn">30</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8940995246992-8"><SPAN class="crayon-cn">3</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-i">Alabama</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-cn">1</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8940995246992-9"><SPAN class="crayon-cn">72</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Tennessee</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-cn">1</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8940995246992-10"><SPAN class="crayon-cn">66</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-e">South </SPAN><SPAN class="crayon-i">Australia</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-cn">239</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0060 seconds] -->
+ Si une personne à deux adresses ‘Home’, prenez la première. (notez qu’il n’y en 
+a pas présentement, mais rien ne l’empêche dans la structure de la bd)
+<P></P>
+<DIV class="su-spoiler su-spoiler-style-default su-spoiler-icon-plus su-spoiler-closed">
+<DIV class="su-spoiler-title"><SPAN class="su-spoiler-icon"></SPAN>Preuve que 
+personne n'a 2 adresse de type home</DIV>
+<DIV class="su-spoiler-content su-clearfix" style="display: none;"><!-- Crayon Syntax Highlighter v2.7.1 -->
+		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab8950827826421" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick">select p.businessentityid, count(bea.AddressTypeID)
+from Person.person p
+join person.BusinessEntityAddress bea
+on p.BusinessEntityID = bea.businessentityid
+where bea.addresstypeid = 2
+group by p.BusinessEntityID
+having count(bea.AddressTypeID) &gt; 1</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8950827826421-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8950827826421-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8950827826421-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8950827826421-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab8950827826421-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab8950827826421-6">6</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab8950827826421-7">7</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab8950827826421-1"><SPAN class="crayon-k">select</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">businessentityid</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-e">count</SPAN><SPAN class="crayon-sy">(</SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeID</SPAN><SPAN class="crayon-sy">)</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8950827826421-2"><SPAN class="crayon-k">from</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">person</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8950827826421-3"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityAddress</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8950827826421-4"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">businessentityid</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8950827826421-5"><SPAN class="crayon-k">where</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">addresstypeid</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-cn">2</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab8950827826421-6"><SPAN class="crayon-k">group</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">by</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab8950827826421-7"><SPAN class="crayon-k">having</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-e">count</SPAN><SPAN class="crayon-sy">(</SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeID</SPAN><SPAN class="crayon-sy">)</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">&gt;</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-cn">1</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0049 seconds] --> 
+</DIV></DIV>
+<H2>Étape 2</H2>
+<P>Demandez l’id d’une province et affichez les clients de celle-ci</P>
+<P>c.à.d. l’équivalent de la requête suivante pour la province de “Val d’oise” 
+(181):</P><!-- Crayon Syntax Highlighter v2.7.1 -->		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab895f249517379" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick">SELECT p.BusinessEntityId, p.Firstname, p.Lastname
+FROM  Person.Person p
+JOIN Person.BusinessEntity as be
+ON p.BusinessEntityID = be.BusinessEntityID
+JOIN Person.BusinessEntityAddress bea
+ON be.BusinessEntityID = bea.BusinessEntityID
+JOIN Person.AddressType at
+ON bea.AddressTypeId = at.AddressTypeId
+JOIN Person.Address ad
+ON bea.AddressID = ad.AddressID
+JOIN Person.StateProvince sp
+ON ad.StateProvinceID = sp.StateProvinceID
+WHERE at.Name = 'Home'
+and sp.StateProvinceID = 181</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab895f249517379-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab895f249517379-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab895f249517379-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-6">6</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab895f249517379-7">7</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-8">8</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab895f249517379-9">9</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-10">10</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab895f249517379-11">11</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-12">12</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab895f249517379-13">13</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab895f249517379-14">14</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-1"><SPAN class="crayon-k">SELECT</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityId</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Firstname</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Lastname</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-2"><SPAN class="crayon-k">FROM</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-3"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntity</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">as</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-4"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-5"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityAddress</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-6"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">be</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-7"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressType</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-8"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeId</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeId</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-9"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Address</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-10"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-11"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvince</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-12"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ad</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab895f249517379-13"><SPAN class="crayon-k">WHERE</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">at</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-s">'Home'</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab895f249517379-14"><SPAN class="crayon-k ">and</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-cn">181</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0095 seconds] --> 
+<P></P><!-- Crayon Syntax Highlighter v2.7.1 -->		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab896d180827282" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick show-plain-default">BusinessEntityId Firstname               Lastname
+---------------- ----------------------- ----------
+2539             Shannon                 Zhu
+2925             Jarrod                  Raman
+3079             Kelvin                  Raji
+4203             Tommy                   Sharma
+5303             Dale                    Tang
+5644             Darryl                  Gao</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab896d180827282-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab896d180827282-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab896d180827282-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab896d180827282-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab896d180827282-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab896d180827282-6">6</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab896d180827282-7">7</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab896d180827282-8">8</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab896d180827282-1"><SPAN class="crayon-e">BusinessEntityId </SPAN><SPAN class="crayon-e">Firstname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-v">Lastname</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab896d180827282-2"><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">-</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN><SPAN class="crayon-o">--</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab896d180827282-3"><SPAN class="crayon-cn">2539</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Shannon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-i">Zhu</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab896d180827282-4"><SPAN class="crayon-cn">2925</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Jarrod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Raman</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab896d180827282-5"><SPAN class="crayon-cn">3079</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Kelvin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Raji</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab896d180827282-6"><SPAN class="crayon-cn">4203</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Tommy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-i">Sharma</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab896d180827282-7"><SPAN class="crayon-cn">5303</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Dale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">Tang</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab896d180827282-8"><SPAN class="crayon-cn">5644</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN class="crayon-e">Darryl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="crayon-v">Gao</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0036 seconds] --> 
+<P>
+<H2 style="text-align: left;">Étape 3</H2>
+<P style="text-align: left;">Demandez l’id d’une personne et affichez les 
+commandes de cette personne. Si une personne n’a pas de commande, affichez un 
+message l’indiquant.</P>
+<P style="text-align: left;">Exemple pour la personne 1701.</P><!-- Crayon Syntax Highlighter v2.7.1 -->
+		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab897b981171278" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick">SELECT  DISTINCT  c.PersonId, p.FirstName, p.LastName, 
+			ea.EmailAddress,
+			pnt.Name TelephoneType, pp.PhoneNumber,
+			adr.AddressLine1, adr.AddressLine2, 
+			sp.Name EtatProvince,
+			cr.Name Pays,
+			soh.SalesOrderID, soh.OrderDate, 
+			sd.OrderQty,sd.ProductID, sd.UnitPrice, prod.Name, prod.StandardCost
+
+FROM Sales.SalesOrderHeader soh
+JOIN Sales.Customer c
+ON soh.CustomerID = c.CustomerID
+JOIN Person.Person p
+ON c.PersonId = p.BusinessEntityID
+LEFT JOIN Person.BusinessEntityAddress bea
+On p.BusinessEntityID = bea.BusinessEntityID
+JOIN Person.AddressType adrt
+ON bea.AddressTypeID = adrt.AddressTypeID
+LEFT JOIN Person.Address adr
+ON bea.AddressID = adr.AddressID
+JOIN Sales.SalesOrderDetail sd
+ON soh.SalesOrderID = sd.SalesOrderID
+JOIN Production.Product prod
+ON sd.ProductID = prod.ProductID 
+join Person.EmailAddress ea
+on ea.BusinessEntityID = p.BusinessEntityID
+join Person.StateProvince sp
+on sp.StateProvinceID = adr.StateProvinceID
+join Person.CountryRegion cr
+on cr.CountryRegionCode = sp.CountryRegionCode
+join Person.PersonPhone pp
+on pp.BusinessEntityID = p.BusinessEntityID
+join Person.PhoneNumberType pnt
+on pnt.PhoneNumberTypeID = pp.PhoneNumberTypeID
+WHERE adrt.Name  = 'Home' 
+and p.BusinessEntityID = 1701
+ORDER BY c.PersonID, soh.SalesOrderID, sd.ProductID</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab897b981171278-1">1</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-2">2</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab897b981171278-3">3</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-4">4</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab897b981171278-5">5</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-6">6</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab897b981171278-7">7</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-8">8</DIV>
+      <DIV class="crayon-num" 
+data-line="crayon-57178f8ab897b981171278-9">9</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-10">10</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-11">11</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-12">12</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-13">13</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-14">14</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-15">15</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-16">16</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-17">17</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-18">18</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-19">19</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-20">20</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-21">21</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-22">22</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-23">23</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-24">24</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-25">25</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-26">26</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-27">27</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-28">28</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-29">29</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-30">30</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-31">31</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-32">32</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-33">33</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-34">34</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-35">35</DIV>
+      <DIV class="crayon-num crayon-striped-num" data-line="crayon-57178f8ab897b981171278-36">36</DIV>
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab897b981171278-37">37</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-1"><SPAN class="crayon-k">SELECT</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;</SPAN><SPAN class="crayon-k">DISTINCT</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;</SPAN><SPAN class="crayon-i">c</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PersonId</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">FirstName</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">LastName</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-2"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">ea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">EmailAddress</SPAN><SPAN class="crayon-sy">,</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-3"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">pnt</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">TelephoneType</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PhoneNumber</SPAN><SPAN class="crayon-sy">,</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-4"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">adr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressLine1</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressLine2</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-5"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">EtatProvince</SPAN><SPAN class="crayon-sy">,</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-6"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">cr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Pays</SPAN><SPAN class="crayon-sy">,</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-7"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">soh</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderID</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">soh</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">OrderDate</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-8"><SPAN class="crayon-h">			</SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">OrderQty</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">ProductID</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">UnitPrice</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">prod</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">prod</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StandardCost</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-9">&nbsp;</DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-10"><SPAN class="crayon-k">FROM</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Sales</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderHeader</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">soh</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-11"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Sales</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Customer</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">c</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-12"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">soh</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">CustomerID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">c</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">CustomerID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-13"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-14"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">c</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PersonId</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-15"><SPAN class="crayon-k">LEFT</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityAddress</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-16"><SPAN class="crayon-k">On</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-17"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressType</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adrt</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-18"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adrt</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressTypeID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-19"><SPAN class="crayon-k">LEFT</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Address</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adr</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-20"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">bea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">AddressID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-21"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Sales</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderDetail</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sd</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-22"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">soh</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-23"><SPAN class="crayon-k ">JOIN</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Production</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Product</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">prod</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-24"><SPAN class="crayon-k">ON</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">ProductID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">prod</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">ProductID</SPAN><SPAN class="crayon-h"> </SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-25"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">EmailAddress</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ea</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-26"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">ea</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-27"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvince</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-28"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">StateProvinceID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-29"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">CountryRegion</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">cr</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-30"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">cr</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">CountryRegionCode</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">CountryRegionCode</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-31"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PersonPhone</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pp</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-32"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-33"><SPAN class="crayon-k ">join</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">Person</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PhoneNumberType</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pnt</SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-34"><SPAN class="crayon-k">on</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pnt</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PhoneNumberTypeID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">pp</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PhoneNumberTypeID</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-35"><SPAN class="crayon-k">WHERE</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">adrt</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">Name</SPAN><SPAN class="crayon-h">&nbsp;&nbsp;</SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-s">'Home'</SPAN><SPAN class="crayon-h"> </SPAN></DIV>
+<DIV class="crayon-line crayon-striped-line" id="crayon-57178f8ab897b981171278-36"><SPAN class="crayon-k ">and</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">p</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">BusinessEntityID</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-o">=</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-cn">1701</SPAN></DIV>
+<DIV class="crayon-line" id="crayon-57178f8ab897b981171278-37"><SPAN class="crayon-k">ORDER</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-k">BY</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">c</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">PersonID</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">soh</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">SalesOrderID</SPAN><SPAN class="crayon-sy">,</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-i">sd</SPAN><SPAN class="crayon-sy">.</SPAN><SPAN class="crayon-i">ProductID</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0247 seconds] -->
+ L’affichage devra séparer les clients (incluant l’adresse), les entêtes de 
+commandes, et les lignes de détails.
+<P></P>
+<H2>Correction</H2>
+<P>Bonne définition</P>
+<P>Commentaires (utilisation du format /// ): 2 points.</P>
+<P>Variables significatives 3 points.</P>
+<P>Bonne utilisation des attributs de navigation (pas de join): 5 points</P>
+<P>Affichage de la commande au complet: 10 points</P>
+<P>Étape 1 et 2 fonctionnelles: 5 points</P>
+<H2>Remise</H2>
+<P>Vous devez enlever le package entityframework avant de zipper votre 
+projet:</P><!-- Crayon Syntax Highlighter v2.7.1 -->		 
+<DIV class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" 
+id="crayon-57178f8ab898b135497221" style="line-height: 15px !important; font-size: 12px !important; margin-top: 12px; margin-bottom: 12px;" 
+data-settings=" minimize scroll-mouseover">
+<DIV class="crayon-plain-wrap"><TEXTAREA class="crayon-plain print-no" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;" wrap="soft" readonly="" data-settings="dblclick">uninstall-package entityframework</TEXTAREA></DIV>
+<DIV class="crayon-main">
+<TABLE class="crayon-table">
+  <TBODY>
+  <TR class="crayon-row">
+    <TD class="crayon-nums " data-settings="hide">
+      <DIV class="crayon-nums-content" style="line-height: 15px !important; font-size: 12px !important;">
+      <DIV class="crayon-num" 
+      data-line="crayon-57178f8ab898b135497221-1">1</DIV></DIV></TD>
+    <TD class="crayon-code">
+<DIV class="crayon-pre" style="line-height: 15px !important; font-size: 12px !important; tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; -webkit-tab-size: 4;">
+<DIV class="crayon-line" id="crayon-57178f8ab898b135497221-1"><SPAN class="crayon-v">uninstall</SPAN><SPAN class="crayon-o">-</SPAN><SPAN class="crayon-t">package</SPAN><SPAN class="crayon-h"> </SPAN><SPAN class="crayon-v">entityframework</SPAN></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- [Format Time: 0.0008 seconds] --> 
+<P>Vous devez compresser (zipper) votre répertoire de projet et le mettre sur 
+Léa.</P>
+<P>&nbsp;</P>
+<P><EM><SPAN style="font-family: comic sans ms,sans-serif; font-size: 24pt;">Bon 
+travail!</SPAN></EM></P>
+<P>&nbsp;</P>
+<P style="text-align: center;"><SPAN style="font-size: 8pt;"><A title="BD2: EF Exercice: ajout des relations (partie2)" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-relations-2/bd2-ef-exercice-ajout-des-relations-partie2/">BD2: 
+EF Exercice: ajout des relations (partie2)</A>&lt;&lt;&nbsp; &gt;&gt;<A title="BD2: EF Les projections" 
+href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-ef-les-projections/">BD2: 
+EF Les projections</A></SPAN></P></DIV><!-- .entry-content -->	 </ARTICLE><!-- #post-## --> 
+<DIV class="comments-area" id="comments">
+<H2 class="comments-title">			2 réflexions au sujet de «&nbsp;Protégé&nbsp;: 
+BD2: Projet de Session&nbsp;»		</H2>
+<OL class="comment-list">
+  <LI class="comment even thread-even depth-1 parent" id="comment-25"><ARTICLE 
+  class="comment-body" id="div-comment-25"><FOOTER class="comment-meta">
+  <DIV class="comment-author vcard"><IMG width="56" height="56" class="avatar avatar-56 photo" 
+  alt="" src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/49b97ea9bf33de84e76a924f47a320ab.png" 
+  srcset="https://secure.gravatar.com/avatar/49b97ea9bf33de84e76a924f47a320ab?s=112&amp;d=mm&amp;r=g 2x">						<B 
+  class="fn">Émilio Gonzalez</B> <SPAN class="says">dit&nbsp;:</SPAN>					</DIV><!-- .comment-author -->
+  					 
+  <DIV class="comment-metadata"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/#comment-25"><time 
+  datetime="2016-04-18T06:21:18+00:00">								18 avril 2016 à 6 h 21 
+  min							</time>						 </A>											 </DIV><!-- .comment-metadata -->
+  									 </FOOTER><!-- .comment-meta -->				 
+  <DIV class="comment-content">
+  <P>Benou tu m’as tilt pourquoi t’as écris bon travail en comic sans ms 
+  &gt;:(</P></DIV><!-- .comment-content -->				 
+  <DIV class="reply"><A class="comment-reply-link" aria-label="Répondre à Émilio Gonzalez" 
+  onclick='return addComment.moveForm( "div-comment-25", "25", "respond", "3120" )' 
+  href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/?replytocom=25#respond" 
+  rel="nofollow">Répondre</A></DIV></ARTICLE><!-- .comment-body --> 
+  <OL class="children">
+    <LI class="comment byuser comment-author-benoitd bypostauthor odd alt depth-2" 
+    id="comment-26"><ARTICLE class="comment-body" id="div-comment-26"><FOOTER 
+    class="comment-meta">
+    <DIV class="comment-author vcard"><IMG width="56" height="56" class="avatar avatar-56 photo" 
+    alt="" src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/467be8976d0646ced172f31b8f6926b3.png" 
+    srcset="https://secure.gravatar.com/avatar/467be8976d0646ced172f31b8f6926b3?s=112&amp;d=mm&amp;r=g 2x">						<B 
+    class="fn">Benoit Desrosiers</B> <SPAN 
+    class="says">dit&nbsp;:</SPAN>					</DIV><!-- .comment-author -->					 
+    <DIV class="comment-metadata"><A href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/#comment-26"><time 
+    datetime="2016-04-19T18:53:12+00:00">								19 avril 2016 à 18 h 53 
+    min							</time>						 </A>											 </DIV><!-- .comment-metadata -->
+    									 </FOOTER><!-- .comment-meta -->				 
+    <DIV class="comment-content">
+    <P>t’es pas supposé y avoir accès encore 😛</P></DIV><!-- .comment-content -->
+    				 
+    <DIV class="reply"><A class="comment-reply-link" aria-label="Répondre à Benoit Desrosiers" 
+    onclick='return addComment.moveForm( "div-comment-26", "26", "respond", "3120" )' 
+    href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/?replytocom=26#respond" 
+    rel="nofollow">Répondre</A></DIV></ARTICLE><!-- .comment-body --> </LI><!-- #comment-## --> 
+  </OL><!-- .children --> </LI><!-- #comment-## -->		 </OL><!-- .comment-list -->
+											 
+<DIV class="comment-respond" id="respond">
+<H3 class="comment-reply-title" id="reply-title">Laisser un commentaire 
+<SMALL><A id="cancel-comment-reply-link" style="display: none;" href="https://informatique420.cegepdrummond.ca/wordpress/index.php/cours-offerts/420-bd2-dm-base-de-donnee-2-h2016/bd2-entity-framework-code-first/bd2-projet-de-session/#respond" 
+rel="nofollow">Annuler la réponse.</A></SMALL></H3>
+<FORM class="comment-form" id="commentform" action="https://informatique420.cegepdrummond.ca/wordpress/wp-comments-post.php" 
+method="post" novalidate="">
+<P class="comment-notes"><SPAN id="email-notes">Votre adresse de messagerie ne 
+sera pas publiée.</SPAN> Les champs obligatoires sont indiqués avec <SPAN class="required">*</SPAN></P>
+<P class="comment-form-author"><LABEL for="author">Nom <SPAN 
+class="required">*</SPAN></LABEL><INPUT name="author" id="author" aria-required="true" required="required" type="text" size="30"></P>
+<P class="comment-form-email"><LABEL for="email">Adresse de contact <SPAN class="required">*</SPAN></LABEL><INPUT name="email" id="email" aria-required="true" aria-describedby="email-notes" required="required" type="email" size="30"></P>
+<P class="comment-form-url"><LABEL for="url">Site 
+web</LABEL><INPUT name="url" id="url" type="url" size="30"></P>
+<P class="comment-form-comment"><LABEL 
+for="comment">Commentaire</LABEL><TEXTAREA name="comment" id="comment" aria-required="true" required="required" rows="8" cols="45"></TEXTAREA></P>
+<P class="form-submit"><INPUT name="submit" class="submit" id="submit" type="submit" value="Laisser un commentaire"> 
+<INPUT name="comment_post_ID" id="comment_post_ID" type="hidden" value="3120"> 
+<INPUT name="comment_parent" id="comment_parent" type="hidden" value="0"> 
+</P></FORM></DIV><!-- #respond -->			 </DIV><!-- .comments-area -->		 </main><!-- .site-main -->
+	 </DIV><!-- .content-area -->	 </DIV><!-- .site-content -->	 <FOOTER class="site-footer" 
+id="colophon" role="contentinfo">
+<DIV class="site-info"><A href="https://wordpress.org/">Fièrement propulsé par 
+WordPress</A>		 </DIV><!-- .site-info -->	 </FOOTER><!-- .site-footer --> </DIV><!-- .site --> 
+<LINK id="font-awesome-css" href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/font-awesome.min.css" 
+rel="stylesheet" type="text/css" media="all"> <LINK id="su-box-shortcodes-css" 
+href="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/box-shortcodes.css" 
+rel="stylesheet" type="text/css" media="all"> 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/drawit-iframe.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/skip-link-focus-fix.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/comment-reply.min.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">ouvrir le sous-menu<\/span>","collapse":"<span class=\"screen-reader-text\">fermer le sous-menu<\/span>"};
+/* ]]> */
+</SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/functions.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+/* <![CDATA[ */
+var su_other_shortcodes = {"no_preview":"This shortcode doesn't work in live preview. Please insert it into editor and preview on the site."};
+/* ]]> */
+</SCRIPT>
+ 
+<SCRIPT src="BD2%20Projet%20de%20Session%20%20Techniques%20de%20l'informatique%20du%20Cégep%20de%20Drummondville_fichiers/other-shortcodes.js" type="text/javascript"></SCRIPT>
+ </BODY></HTML>

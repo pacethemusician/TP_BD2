@@ -1,0 +1,15 @@
+Person.Person
+Person.BusinessEntity
+Person.BusinessEntityAddress
+Person.AddressType
+Person.Address
+Person.StateProvince
+Sales.SalesOrderHeader
+Sales.Customer
+Sales.SalesOrderDetail
+Production.Product
+Person.EmailAddress
+Person.CountryRegion
+Person.PersonPhone
+Person.PhoneNumberType
+ 

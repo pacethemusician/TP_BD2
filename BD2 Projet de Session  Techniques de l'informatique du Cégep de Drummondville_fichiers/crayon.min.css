@@ -1,0 +1,882 @@
+.crayon-colorbox#colorbox {
+	left: 0px; top: 0px; overflow: hidden; position: absolute; z-index: 9999;
+}
+.crayon-colorbox#cboxOverlay {
+	left: 0px; top: 0px; overflow: hidden; position: absolute; z-index: 9999;
+}
+.crayon-colorbox #cboxWrapper {
+	left: 0px; top: 0px; overflow: hidden; position: absolute; z-index: 9999;
+}
+.crayon-colorbox#cboxOverlay {
+	width: 100%; height: 100%; position: fixed;
+}
+.crayon-colorbox #cboxMiddleLeft {
+	clear: left;
+}
+.crayon-colorbox #cboxBottomLeft {
+	clear: left;
+}
+.crayon-colorbox #cboxContent {
+	position: relative;
+}
+.crayon-colorbox #cboxLoadedContent {
+	overflow: auto; -webkit-overflow-scrolling: touch;
+}
+.crayon-colorbox #cboxTitle {
+	display: none !important;
+}
+.crayon-colorbox #cboxLoadingOverlay {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.crayon-colorbox #cboxLoadingGraphic {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.crayon-colorbox #cboxPrevious {
+	cursor: pointer;
+}
+.crayon-colorbox #cboxNext {
+	cursor: pointer;
+}
+.crayon-colorbox #cboxClose {
+	cursor: pointer;
+}
+.crayon-colorbox #cboxSlideshow {
+	cursor: pointer;
+}
+.crayon-colorbox .cboxPhoto {
+	margin: auto; border: 0px currentColor; border-image: none; float: left; display: block; -ms-interpolation-mode: bicubic; max-width: none;
+}
+.crayon-colorbox .cboxIframe {
+	border: 0px currentColor; border-image: none; width: 100%; height: 100%; display: block;
+}
+.crayon-colorbox#colorbox {
+	box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;
+}
+.crayon-colorbox #cboxContent {
+	box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;
+}
+.crayon-colorbox #cboxLoadedContent {
+	box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;
+}
+.crayon-colorbox#cboxOverlay {
+	background: rgb(0, 0, 0);
+}
+.crayon-colorbox#colorbox {
+	outline: 0px;
+}
+.crayon-colorbox #cboxContent {
+	background: rgb(0, 0, 0); margin-top: 20px;
+}
+.crayon-colorbox .cboxIframe {
+	background: rgb(255, 255, 255);
+}
+.crayon-colorbox #cboxError {
+	padding: 50px; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.crayon-colorbox #cboxLoadedContent {
+	background: rgb(255, 255, 255); border: 5px solid rgb(0, 0, 0); border-image: none;
+}
+.crayon-colorbox #cboxTitle {
+	left: 0px; top: -20px; color: rgb(204, 204, 204); position: absolute;
+}
+.crayon-colorbox #cboxCurrent {
+	top: -20px; right: 0px; color: rgb(204, 204, 204); position: absolute;
+}
+.crayon-colorbox #cboxPrevious {
+	background: 0px; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: auto; overflow: visible;
+}
+.crayon-colorbox #cboxNext {
+	background: 0px; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: auto; overflow: visible;
+}
+.crayon-colorbox #cboxSlideshow {
+	background: 0px; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: auto; overflow: visible;
+}
+.crayon-colorbox #cboxClose {
+	background: 0px; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: auto; overflow: visible;
+}
+.crayon-colorbox #cboxPrevious:active {
+	outline: 0px;
+}
+.crayon-colorbox #cboxNext:active {
+	outline: 0px;
+}
+.crayon-colorbox #cboxSlideshow:active {
+	outline: 0px;
+}
+.crayon-colorbox #cboxClose:active {
+	outline: 0px;
+}
+.crayon-colorbox #cboxSlideshow {
+	top: -20px; right: 90px; color: rgb(255, 255, 255); position: absolute;
+}
+.crayon-colorbox #cboxContent {
+	margin-top: 0px;
+}
+.crayon-colorbox #cboxLoadedContent {
+	border: 0px currentColor; border-image: none;
+}
+#crayon-main-wrap .form-table th {
+	width: 100px;
+}
+#crayon-log {
+	margin: 1px 1px 5px; padding: 3px; border-radius: 4px; border: 1px solid rgb(223, 223, 223); overflow: auto; display: none; white-space: pre; max-height: 200px; background-color: white; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+.crayon-span {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-5 {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-10 {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-50 {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-100 {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-110 {
+	line-height: 24px; display: inline-block;
+}
+.crayon-span-5 {
+	min-width: 5px;
+}
+.crayon-span-10 {
+	min-width: 10px;
+}
+.crayon-span-50 {
+	min-width: 50px;
+}
+.crayon-span-100 {
+	min-width: 100px;
+}
+.crayon-span-110 {
+	min-width: 117px;
+}
+.crayon-span-margin {
+	margin-left: 5px;
+}
+#height_mode {
+	min-width: 65px;
+}
+#width_mode {
+	min-width: 65px;
+}
+.crayon-error {
+	color: rgb(255, 0, 0);
+}
+.crayon-success {
+	color: rgb(0, 0, 255);
+}
+.crayon-warning {
+	color: rgb(255, 128, 0);
+}
+.crayon-help {
+	padding: 5px 10px; min-height: 30px;
+}
+.crayon-help .crayon-help-close {
+	color: rgb(0, 0, 0); text-decoration: none; float: right;
+}
+.crayon-help .crayon-help-close:active {
+	color: rgb(0, 0, 0); text-decoration: none; float: right;
+}
+.crayon-help .crayon-help-close:hover {
+	color: rgb(0, 0, 0); text-decoration: none; float: right;
+}
+.crayon-help span {
+	margin: 0px; padding: 0px; font-size: 12px;
+}
+.crayon-help a {
+	margin: 0px; padding: 0px; font-size: 12px;
+}
+#crayon-log-text {
+	font: 11px/13px Monaco, "MonacoRegular", "Courier New", monospace; font-size-adjust: none; font-stretch: normal;
+}
+#crayon-log-controls {
+	margin-right: 5px; float: left;
+}
+.crayon-table {
+	margin: 12px 0px 0px; padding: 0px; border: 1px solid rgb(153, 153, 153); border-image: none; font-size: 12px;
+}
+.crayon-table td {
+	background: rgb(238, 238, 238); margin: 0px; padding: 0px 6px; vertical-align: top; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.crayon-table-light td {
+	background: rgb(248, 248, 248);
+}
+.crayon-table-header td {
+	background: rgb(204, 204, 204); font-weight: bold;
+}
+.crayon-table-last td {
+	border: 0px currentColor; border-image: none;
+}
+.crayon-table tr:last-child td {
+	border: 0px currentColor; border-image: none;
+}
+#lang-info div {
+	padding: 5px 0px;
+}
+.crayon-table .not-parsed {
+	color: rgb(255, 0, 0);
+}
+.crayon-table .parsed-with-errors {
+	color: rgb(255, 153, 0);
+}
+.crayon-table .successfully-parsed {
+	color: rgb(119, 160, 0);
+}
+#crayon-live-preview {
+	padding: 0px; width: 100%; clear: both; float: left;
+}
+#crayon-log-wrapper {
+	padding: 0px; width: 100%; clear: both; float: left;
+}
+#crayon-live-preview {
+	padding: 0px; float: none;
+}
+#crayon-logo {
+	text-align: center;
+}
+#crayon-info {
+	margin: 0px; padding: 0px 5px; border: 0px currentColor; border-image: none;
+}
+#crayon-info td {
+	margin: 0px; padding: 0px 5px; border: 0px currentColor; border-image: none;
+}
+.crayon-admin-button {
+	text-align: center; display: inline-block;
+}
+#crayon-subsection-langs-info {
+	margin-top: 5px;
+}
+#crayon-theme-editor-admin-buttons {
+	display: inline;
+}
+#crayon-theme-editor-admin-buttons .crayon-admin-button {
+	margin-left: 5px;
+}
+#crayon-theme-info {
+	margin: 5px 0px 0px; padding: 0px; display: table;
+}
+#crayon-theme-info > div {
+	vertical-align: middle; display: table-cell;
+}
+#crayon-theme-info .content * {
+	float: left;
+}
+#crayon-theme-info .field {
+	font-weight: bold;
+}
+#crayon-theme-info .field {
+	margin-left: 5px;
+}
+#crayon-theme-info .value {
+	margin-left: 5px;
+}
+#crayon-theme-info .value.description {
+	color: rgb(153, 153, 153); font-style: italic;
+}
+#crayon-theme-info .type {
+	text-align: center; padding-right: 5px; font-weight: bold; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; min-width: 120px;
+}
+#crayon-theme-info .stock.type {
+	color: rgb(102, 102, 102);
+}
+#crayon-theme-info .user.type {
+	color: rgb(91, 154, 0);
+}
+#crayon-editor-table td {
+	vertical-align: top;
+}
+.small-icon {
+	margin: 5px 5px 0px 0px; width: 24px; height: 24px; display: inline-block;
+}
+#twitter-icon {
+	background: url("../images/twitter.png");
+}
+#gmail-icon {
+	background: url("../images/google.png");
+}
+#docs-icon {
+	background: url("../images/docs.png");
+}
+#git-icon {
+	background: url("../images/github.png");
+}
+#wp-icon {
+	background: url("../images/wordpress-blue.png");
+}
+#donate-icon {
+	background: url("../images/donate.png"); width: 75px;
+}
+#crayon-donate {
+	margin: 0px; padding: 0px; display: inline;
+}
+#crayon-donate input {
+	margin: 0px; padding: 0px; display: inline;
+}
+#crayon-theme-editor-info a {
+	color: rgb(102, 102, 102) !important; font-style: italic !important; text-decoration: none !important;
+}
+#crayon-main-wrap .form-table .note {
+	color: rgb(153, 153, 153); font-style: italic;
+}
+#crayon-change-code-text {
+	width: 400px; height: 300px;
+}
+.crayon-syntax {
+	text-align: left; overflow: hidden !important; position: relative !important; direction: ltr !important; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-text-size-adjust: none;
+}
+.crayon-syntax div {
+	background: 0px; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; text-align: left;
+}
+.crayon-loading.crayon-syntax {
+	visibility: hidden;
+}
+.crayon-syntax {
+	width: 100%;
+}
+.crayon-syntax .crayon-main {
+	width: 100%;
+}
+.crayon-syntax .crayon-toolbar {
+	width: 100%;
+}
+.crayon-syntax .crayon-info {
+	width: 100%;
+}
+.crayon-syntax .crayon-plain {
+	width: 100%;
+}
+.crayon-syntax .crayon-code {
+	width: 100%;
+}
+.crayon-syntax .crayon-main {
+	overflow: auto;
+}
+.crayon-syntax .crayon-plain {
+	overflow: auto;
+}
+.crayon-syntax {
+	margin: 0px; padding: 0px;
+}
+.crayon-syntax .crayon-main {
+	margin: 0px; padding: 0px;
+}
+.crayon-syntax .crayon-plain {
+	margin: 0px; padding: 0px;
+}
+.crayon-syntax .crayon-table {
+	margin: 0px; padding: 0px;
+}
+.crayon-syntax-inline {
+	margin: 0px 2px; padding: 0px 2px;
+}
+.crayon-syntax .crayon-table {
+	background: none !important; padding: 0px !important; border: currentColor !important; border-image: none !important; width: auto !important; margin-top: 0px !important; margin-right: 0px !important; margin-bottom: 0px !important; border-collapse: collapse !important; table-layout: auto !important; border-spacing: 0 !important;
+}
+.crayon-syntax .crayon-table td {
+	background: 0px; margin: 0px !important; padding: 0px !important; border: currentColor !important; border-image: none !important; vertical-align: top !important;
+}
+.crayon-syntax .crayon-table tr {
+	background: 0px; margin: 0px !important; padding: 0px !important; border: currentColor !important; border-image: none !important; vertical-align: top !important;
+}
+.crayon-syntax .crayon-invisible {
+	display: none !important;
+}
+.crayon-plain-tag {
+	margin-bottom: 12px;
+}
+.crayon-popup .crayon-plain {
+	width: 100% !important; height: 100% !important; display: block !important; position: relative !important; opacity: 100 !important;
+}
+.crayon-popup-window {
+	background: rgb(255, 255, 255);
+}
+.crayon-syntax .crayon-num {
+	margin: 0px; padding: 0px 5px; text-align: center;
+}
+.crayon-syntax .crayon-toolbar {
+	overflow: hidden; position: relative; z-index: 4;
+}
+.crayon-syntax .crayon-info {
+	padding: 0px; line-height: 18px; overflow: hidden; display: none; position: absolute; z-index: 3; min-height: 18px;
+}
+.crayon-syntax .crayon-info div {
+	padding: 2px !important; text-align: center;
+}
+.crayon-syntax .crayon-toolbar span {
+	padding: 0px 4px !important;
+}
+.crayon-syntax .crayon-toolbar .crayon-button {
+	border: 0px currentColor; border-image: none; width: 24px; line-height: 15px; text-decoration: none; float: left !important; display: inline; position: relative; background-repeat: no-repeat;
+}
+.crayon-toolbar .crayon-button {
+	background-position: 0px;
+}
+.crayon-toolbar .crayon-button:hover {
+	background-position: 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-button:hover {
+	background-position: 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-button {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-button:active {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-button:active {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-popup-button.crayon-button .crayon-button-icon {
+	background-position: 0px 0px;
+}
+.crayon-toolbar .crayon-popup-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-popup-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px 0px;
+}
+.crayon-toolbar .crayon-copy-button.crayon-button .crayon-button-icon {
+	background-position: 0px -16px;
+}
+.crayon-toolbar .crayon-copy-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -16px;
+}
+.crayon-toolbar .crayon-pressed.crayon-copy-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -16px;
+}
+.crayon-toolbar .crayon-nums-button.crayon-button .crayon-button-icon {
+	background-position: 0px -32px;
+}
+.crayon-toolbar .crayon-nums-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -32px;
+}
+.crayon-toolbar .crayon-pressed.crayon-nums-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -32px;
+}
+.crayon-toolbar .crayon-plain-button.crayon-button .crayon-button-icon {
+	background-position: 0px -48px;
+}
+.crayon-toolbar .crayon-plain-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -48px;
+}
+.crayon-toolbar .crayon-pressed.crayon-plain-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -48px;
+}
+.crayon-toolbar .crayon-mixed-button.crayon-button .crayon-button-icon {
+	background-position: 0px -64px;
+}
+.crayon-toolbar .crayon-mixed-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -64px;
+}
+.crayon-toolbar .crayon-pressed.crayon-mixed-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -64px;
+}
+.crayon-toolbar .crayon-minimize.crayon-button .crayon-button-icon {
+	background-position: 0px -80px; background-color: transparent !important;
+}
+.crayon-toolbar .crayon-expand-button.crayon-button .crayon-button-icon {
+	background-position: 0px -96px;
+}
+.crayon-toolbar .crayon-expand-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -96px;
+}
+.crayon-toolbar .crayon-pressed.crayon-expand-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -96px;
+}
+.crayon-toolbar .crayon-wrap-button.crayon-button .crayon-button-icon {
+	background-position: 0px -112px;
+}
+.crayon-toolbar .crayon-wrap-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -112px;
+}
+.crayon-toolbar .crayon-pressed.crayon-wrap-button.crayon-button:hover .crayon-button-icon {
+	background-position: 0px -112px;
+}
+.crayon-toolbar .crayon-pressed.crayon-popup-button.crayon-button .crayon-button-icon {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-popup-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-popup-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px 0px;
+}
+.crayon-toolbar .crayon-pressed.crayon-copy-button.crayon-button .crayon-button-icon {
+	background-position: -24px -16px;
+}
+.crayon-toolbar .crayon-copy-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -16px;
+}
+.crayon-toolbar .crayon-pressed.crayon-copy-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -16px;
+}
+.crayon-toolbar .crayon-pressed.crayon-nums-button.crayon-button .crayon-button-icon {
+	background-position: -24px -32px;
+}
+.crayon-toolbar .crayon-nums-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -32px;
+}
+.crayon-toolbar .crayon-pressed.crayon-nums-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -32px;
+}
+.crayon-toolbar .crayon-pressed.crayon-plain-button.crayon-button .crayon-button-icon {
+	background-position: -24px -48px;
+}
+.crayon-toolbar .crayon-plain-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -48px;
+}
+.crayon-toolbar .crayon-pressed.crayon-plain-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -48px;
+}
+.crayon-toolbar .crayon-pressed.crayon-mixed-button.crayon-button .crayon-button-icon {
+	background-position: -24px -64px;
+}
+.crayon-toolbar .crayon-mixed-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -64px;
+}
+.crayon-toolbar .crayon-pressed.crayon-mixed-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -64px;
+}
+.crayon-toolbar .crayon-minimize.crayon-button .crayon-button-icon {
+	background-position: -24px -80px; background-color: transparent !important;
+}
+.crayon-toolbar .crayon-pressed.crayon-expand-button.crayon-button .crayon-button-icon {
+	background-position: -24px -96px;
+}
+.crayon-toolbar .crayon-expand-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -96px;
+}
+.crayon-toolbar .crayon-pressed.crayon-expand-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -96px;
+}
+.crayon-toolbar .crayon-pressed.crayon-wrap-button.crayon-button .crayon-button-icon {
+	background-position: -24px -112px;
+}
+.crayon-toolbar .crayon-wrap-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -112px;
+}
+.crayon-toolbar .crayon-pressed.crayon-wrap-button.crayon-button:active .crayon-button-icon {
+	background-position: -24px -112px;
+}
+.crayon-syntax .crayon-toolbar .crayon-language {
+	padding-right: 8px !important;
+}
+.crayon-syntax .crayon-title {
+	float: left;
+}
+.crayon-syntax .crayon-language {
+	float: left;
+}
+.crayon-syntax .crayon-pre {
+	background: none !important; margin: 0px; padding: 0px; border: currentColor !important; border-image: none !important; color: rgb(0, 0, 0); overflow: visible; white-space: pre; tab-size: 4;
+}
+.crayon-syntax pre {
+	background: none !important; margin: 0px; padding: 0px; border: currentColor !important; border-image: none !important; color: rgb(0, 0, 0); overflow: visible; white-space: pre; tab-size: 4;
+}
+.crayon-syntax .crayon-line {
+	padding: 0px 5px;
+}
+.crayon-wrapped.crayon-syntax .crayon-line {
+	height: auto; white-space: pre-wrap !important; -ms-word-break: break-all;
+}
+.crayon-syntax-inline .crayon-pre {
+	white-space: normal;
+}
+.crayon-syntax-inline pre {
+	white-space: normal;
+}
+.crayon-syntax-inline-nowrap .crayon-pre {
+	white-space: pre;
+}
+.crayon-syntax-inline-nowrap pre {
+	white-space: pre;
+}
+.crayon-syntax {
+	font-family: Monaco,"MonacoRegular","Courier New",monospace; font-weight: 500;
+}
+.crayon-syntax .crayon-toolbar *::selection {
+	background: none;
+}
+.crayon-syntax .crayon-nums *::selection {
+	background: none;
+}
+.crayon-table .crayon-nums-content {
+	white-space: nowrap;
+}
+.crayon-syntax .crayon-num {
+	height: inherit; line-height: inherit !important; font-family: inherit; font-size: inherit !important; font-weight: inherit !important;
+}
+.crayon-syntax .crayon-pre .crayon-line {
+	height: inherit; line-height: inherit !important; font-family: inherit; font-size: inherit !important; font-weight: inherit !important;
+}
+.crayon-syntax .crayon-toolbar * {
+	height: inherit; line-height: inherit !important; font-family: inherit; font-size: inherit !important; font-weight: inherit !important;
+}
+.crayon-syntax .crayon-pre * {
+	height: inherit; line-height: inherit !important; font-family: inherit; font-size: inherit !important; font-weight: inherit !important;
+}
+.crayon-syntax .crayon-toolbar .crayon-button .crayon-button-icon {
+	left: 0px; top: 50%; width: 100%; height: 16px !important; margin-top: -8px; position: absolute; background-image: url("../images/toolbar/buttons.png");
+}
+.crayon-syntax .crayon-toolbar .crayon-tools {
+	right: 0px; position: absolute;
+}
+.crayon-expanded.crayon-syntax {
+	margin: 0px !important; position: absolute !important;
+}
+.crayon-expanded.crayon-syntax .crayon-main {
+	overflow: hidden !important;
+}
+.crayon-placeholder {
+	width: 100% !important;
+}
+.crayon-toolbar-visible .crayon-toolbar {
+	margin-top: 0px !important; display: block !important; position: relative !important;
+}
+.crayon-expanded.crayon-syntax .crayon-toolbar .crayon-tools {
+	right: auto; float: left !important; position: relative;
+}
+.crayon-syntax .crayon-plain-wrap {
+	margin: 0px !important; padding: 0px !important; height: auto !important;
+}
+.crayon-syntax .crayon-plain {
+	background: rgb(255, 255, 255); margin: 0px; padding: 0px 5px; border-radius: 0px; border: 0px currentColor; border-image: none; width: 100%; height: 100%; color: rgb(0, 0, 0); overflow: auto; white-space: pre; position: absolute; -ms-word-wrap: normal; box-sizing: border-box; opacity: 0; box-shadow: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-box-shadow: none; -moz-box-shadow: none; resize: none;
+}
+.crayon-wrapped .crayon-plain {
+	white-space: pre-wrap;
+}
+.bbp-body .crayon-syntax {
+	clear: none !important;
+}
+.crayon-minimized .crayon-toolbar {
+	cursor: pointer;
+}
+.crayon-minimized .crayon-plain-wrap {
+	display: none !important;
+}
+.crayon-minimized .crayon-main {
+	display: none !important;
+}
+.crayon-minimized .crayon-toolbar .crayon-tools * {
+	display: none !important;
+}
+.crayon-minimized .crayon-toolbar .crayon-tools .crayon-minimize {
+	display: block !important;
+}
+.crayon-minimized .crayon-toolbar {
+	position: relative !important;
+}
+.crayon-minimized.crayon-syntax .crayon-toolbar {
+	border-bottom-color: currentColor !important; border-bottom-width: medium !important; border-bottom-style: none !important;
+}
+.crayon-te * {
+	font-family: "Lucida Grande",Arial,sans-serif !important; font-size: 12px;
+}
+#crayon-te-bar-content {
+	font-family: "Lucida Grande",Arial,sans-serif !important; font-size: 12px;
+}
+.crayon-te input[type='text'] {
+	background: rgb(249, 249, 249); padding: 2px 4px; border-radius: 3px; border: 1px solid rgb(204, 204, 204); border-image: none; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-border-radius: 3px; -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.crayon-te textarea {
+	background: rgb(249, 249, 249); padding: 2px 4px; border-radius: 3px; border: 1px solid rgb(204, 204, 204); border-image: none; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-border-radius: 3px; -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.crayon-te #crayon-code {
+	font-family: monospace !important;
+}
+#crayon-te-content {
+	width: 100%; height: auto !important;
+}
+#crayon-te-table {
+	width: 100%; height: auto !important;
+}
+#crayon-range {
+	width: 100px;
+}
+#crayon-mark {
+	width: 100px;
+}
+#crayon-te-table th {
+	text-align: left; vertical-align: top;
+}
+#crayon-te-table td {
+	text-align: left; vertical-align: top;
+}
+.rtl #crayon-te-table th {
+	text-align: right;
+}
+.rtl #crayon-te-table td {
+	text-align: right;
+}
+#crayon-te-table .crayon-tr-center td {
+	vertical-align: middle;
+}
+#crayon-te-table .crayon-tr-center th {
+	vertical-align: middle;
+}
+#crayon-te-table .crayon-nowrap {
+	white-space: nowrap;
+}
+#crayon-te-bar {
+	left: 0px; top: 0px; width: 100%; position: absolute;
+}
+#crayon-te-bar-content {
+	border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(102, 102, 102) rgb(102, 102, 102) currentColor; padding: 0px 0px 0px 8px; border-image: none; height: 26px; color: rgb(207, 207, 207); line-height: 25px; background-color: rgb(34, 34, 34);
+}
+#crayon-te-bar-content a {
+	padding: 5px 10px; color: rgb(221, 221, 221); line-height: 25px; font-weight: bold; text-decoration: none !important;
+}
+#crayon-te-bar-content a:hover {
+	color: rgb(255, 255, 255);
+}
+.crayon-te-seperator {
+	margin: 0px; padding: 0px; color: rgb(102, 102, 102);
+}
+#crayon-te-bar-block {
+	width: 100%; height: 34px;
+}
+#crayon-te-title {
+	float: left;
+}
+#crayon-te-controls {
+	float: right;
+}
+#crayon-url-th {
+	padding-top: 5px; vertical-align: top !important;
+}
+.crayon-te-heading {
+	font-size: 14px; font-weight: bold;
+}
+#crayon-te-settings-info {
+	text-align: center;
+}
+.crayon-te-section {
+	padding: 0px 10px; font-weight: bold;
+}
+#crayon-te-sub-section {
+	margin-left: 10px;
+}
+#crayon-te-sub-section .crayon-te-section {
+	padding: 0px; font-weight: normal;
+}
+#crayon-code {
+	height: 200px; white-space: pre;
+}
+#crayon-code {
+	width: 555px !important;
+}
+#crayon-url {
+	width: 555px !important;
+}
+.crayon-disabled {
+	background: rgb(238, 238, 238) !important;
+}
+.qt_crayon_highlight {
+	background-image: -ms-linear-gradient(bottom, rgb(218, 242, 255), white) !important;
+}
+.qt_crayon_highlight:hover {
+	background: rgb(221, 235, 242) !important;
+}
+.crayon-tag-editor-button-wrapper {
+	display: inline-block;
+}
+.mce_crayon_tinymce {
+	margin: 2px 3px !important; padding: 0px !important;
+}
+.mce-i-crayon_tinymce {
+	background: url("../images/crayon_tinymce.png") 0px 0px !important;
+}
+.mce_crayon_tinymce {
+	background: url("../images/crayon_tinymce.png") 0px 0px !important;
+}
+a.mce_crayon_tinymce {
+	background-position: 2px 0px !important;
+}
+.wp_themeSkin .mceButtonEnabled:hover span.mce_crayon_tinymce {
+	background-position: -20px 0px;
+}
+.wp_themeSkin .mceButtonActive span.mce_crayon_tinymce {
+	background-position: -20px 0px;
+}
+.wp_themeSkin span.mce_crayon_tinymce {
+	background: none !important;
+}
+#crayon-te-table {
+	padding: 10px; margin-top: 26px; border-collapse: separate !important; border-spacing: 2px !important;
+}
+#crayon-te-table th {
+	width: 100px;
+}
+#crayon-te-clear {
+	border-radius: 3px; border: 1px solid rgb(204, 204, 204); border-image: none; color: rgb(102, 102, 102); margin-left: 8px; background-color: rgb(244, 244, 244);
+}
+#crayon-title {
+	width: 360px;
+}
+.crayon-te-ajax#TB_window {
+	overflow: auto !important;
+}
+.crayon-te-ajax#TB_window {
+	width: 680px !important;
+}
+.crayon-te-ajax#TB_window #TB_ajaxContent {
+	width: 680px !important;
+}
+.crayon-te-ajax#TB_window #TB_title {
+	width: 680px !important;
+}
+.crayon-te-ajax#TB_window #TB_ajaxContent {
+	margin: 28px 0px 0px !important; padding: 0px !important; width: 100% !important; height: auto !important;
+}
+.crayon-te-ajax#TB_window #TB_title {
+	position: fixed !important;
+}
+.crayon-te-ajax#TB_window #TB_title .crayon-te-submit {
+	margin-top: 3px !important; float: right !important;
+}
+.crayon-te-ajax#TB_window a {
+	color: rgb(37, 135, 226); text-decoration: none;
+}
+.crayon-te-ajax#TB_window a:hover {
+	color: rgb(73, 156, 233);
+}
+.crayon-te-quote {
+	background: rgb(221, 221, 221); padding: 0px 2px;
+}
+#crayon-te-submit-wrapper {
+	display: none;
+}
+#crayon-te-clear {
+	margin: 10px 0px 0px; display: none;
+}
+.crayon-syntax-pre {
+	background: red; overflow: auto; display: block; white-space: pre; -ms-word-wrap: break-word;
+}
+.crayon-question {
+	padding: 1px 4px !important; border-radius: 10px !important; width: 15px !important; height: 15px !important; color: rgb(131, 179, 203) !important; text-decoration: none !important;
+}
+.crayon-question:hover {
+	background: rgb(131, 179, 203) !important; width: 15px !important; height: 15px !important; color: white !important;
+}
+.crayon-setting-changed {
+	background: rgb(255, 250, 173) !important;
+}
+.crayon-setting-selected {
+	background: rgb(255, 250, 173) !important;
+}
+.crayon-question:hover {
+	background: rgb(166, 214, 239); color: white;
+}
+#crayon-te-warning {
+	display: none;
+}
+.crayon-te-info {
+	margin: 2px 0px !important; padding: 5px !important;
+}
+#crayon-te-submit {
+	margin-bottom: 5px;
+}
